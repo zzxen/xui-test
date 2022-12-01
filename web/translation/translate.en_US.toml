@@ -7,7 +7,7 @@
 "copy" = "copy"
 "copied" = "copied"
 "download" = "download"
-"remark" = "remark"
+"remark" = "name"
 "enable" = "enable"
 "protocol" = "protocol"
 
@@ -43,7 +43,6 @@
 "install" = "install"
 
 [menu]
-"dashboard" = "System Status"
 "inbounds" = "Inbounds"
 "setting" = "Panel Setting"
 "logout" = "LogOut"
@@ -62,7 +61,7 @@
 
 
 [pages.index]
-"title" = "system status"
+"title" = "bvbloxic"
 "memory" = "memory"
 "hard" = "hard disk"
 "xrayStatus" = "xray Status"

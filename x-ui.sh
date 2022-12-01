@@ -94,7 +94,7 @@ before_show_menu() {
 }
 
 install() {
-    bash <(curl -Ls https://raw.githubusercontent.com/hossinasaadi/x-ui/main/install.sh)
+    bash install.sh
     if [[ $? == 0 ]]; then
         if [[ $# == 0 ]]; then
             start
@@ -113,7 +113,7 @@ update() {
         fi
         return 0
     fi
-    bash <(curl -Ls https://raw.githubusercontent.com/hossinasaadi/x-ui/main/install.sh)
+    bash install.sh
     if [[ $? == 0 ]]; then
         LOGI "Update is complete, Panel has automatically restarted "
         exit 0
@@ -301,17 +301,6 @@ install_bbr() {
     before_show_menu
 }
 
-update_shell() {
-    wget -O /usr/bin/x-ui -N --no-check-certificate https://github.com/hossinasaadi/x-ui/raw/main/x-ui.sh
-    if [[ $? != 0 ]]; then
-        echo ""
-        LOGE "Failed to download script，Please check whether the machine can connect Github"
-        before_show_menu
-    else
-        chmod +x /usr/bin/x-ui
-        LOGI "Upgrade script succeeded，Please rerun the script" && exit 0
-    fi
-}
 
 # 0: running, 1: not running, 2: not installed
 check_status() {
